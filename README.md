@@ -3,4 +3,4 @@
 
 [build-badge]: https://img.shields.io/travis/Mattaru/python-hangman-game/master.png?style=flat-square
 
-[build]: https://travis-ci.org/Mattaru/python-hangman-game
+[build]: https://travis-ci.org/Mattaru/python-hangman-game.svg?branch=main
