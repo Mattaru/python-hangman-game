@@ -1,9 +1,9 @@
 # python-hangman-game
 [![Travis][build-badge]][build]
 
-[build-badge]: https://img.shields.io/travis/Mattaru/python-hangman-game/master.png?style=flat-square
+[build-badge]:https://img.shields.io/travis/Mattaru/python-hangman-game/master.png?style=flat-square
 
-[build]: https://travis-ci.org/Mattaru/python-hangman-game
+[build]:https://travis-ci.org/Mattaru/python-hangman-game
 
 ##### For start:
 1. Clone repo `https://travis-ci.org/Mattaru/python-hangman-game`
