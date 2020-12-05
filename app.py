@@ -75,11 +75,10 @@ class Hangman:
             return
         self.make_output_row()
         self.start_game_message()
-        # print(f'{self.start_message}\n{self.output_word.upper()}')
         self.game_process()
         self.end_game()
 
 
 if __name__ == '__main__':
-    x = Hangman(dict=DICT_OF_WORD)
-    x.start()
+    game = Hangman(dict=DICT_OF_WORD)
+    game.start()
