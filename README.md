@@ -5,6 +5,8 @@
 
 [build]: https://travis-ci.org/Mattaru/python-hangman-game
 
+[![Build Status](https://travis-ci.org/Mattaru/python-hangman-game.svg?branch=main)](https://travis-ci.org/Mattaru/python-hangman-game)
+
 ##### For start:
 1. Clone the repo `https://travis-ci.org/Mattaru/python-hangman-game`
 1. Create a venv `python -m venv <path>/<venv:name>`
