@@ -14,12 +14,14 @@ class Hangman:
         self.output_word = ''
         self.guess_letter = ''
         self.start_message = "\nHallow! We have one of the word from the dictionary of words." \
-                             " We do random choice one of it word and now you should try guess this word." \
+                             " We do random choice one of it words and then you should try guess this word." \
                              "\nRules:\n1. We show how many letters in the word.\n" \
                              "2. You should try enter the guess letter\n\t" \
                              "- If letter is in the word - we show you where it is.\n\t" \
                              "- If isn't - your fail count had been +1.\n" \
-                             "3. Game stops, if your fail count is equal 4, or if you are guess the word.\nGood luck!"
+                             "3. Game stops, if your fail count is equal 4," \
+                             " or if you are guess all letters in the word.\n" \
+                             "\nGood luck!\n"
         self.success_message = '\nGood job! Try again.'
         self.fail_message = 'Sorry, but this letter is not exist.'
         self.win_message = '\nCongratulations! You are win the game!'
@@ -47,13 +49,16 @@ class Hangman:
             self.fails += 1
             return False
 
+    def get_answer(self):
+        if self.guess_letter_valid():
+            print(f'{self.success_message}\n{self.output_word.upper()}')
+        else:
+            print(f'\n{self.fail_message}\nWarning! You are have more {4 - self.fails}\n{self.output_word.upper()}')
+
     def game_process(self):
         while self.fails != 4 and self.letter_count != 0:
             self.input_letter()
-            if self.guess_letter_valid():
-                print(f'{self.success_message}\n{self.output_word}')
-            else:
-                print(f'\n{self.fail_message}\nWarning! You are have more {4 - self.fails}\n{self.output_word}')
+            self.get_answer()
 
     def end_game(self):
         if self.fails == 4:
@@ -61,13 +66,16 @@ class Hangman:
         else:
             print(self.win_message)
 
+    def start_game_message(self):
+        return print(f'{self.start_message}\n{self.output_word.upper()}')
+
     def start(self):
         if self.guess_word == '':
             print("\nSorry, but the dictionary with a words is empty. We can't start the game.")
             return
         self.make_output_row()
-        print(self.guess_word)  # -
-        print(f'{self.start_message}\n{self.output_word}')
+        self.start_game_message()
+        # print(f'{self.start_message}\n{self.output_word.upper()}')
         self.game_process()
         self.end_game()
 
