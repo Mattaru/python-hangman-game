@@ -99,7 +99,7 @@ def test_get_answer_not_valid(capfd, test_obj_with_dict):
     test_obj_with_dict.get_answer()
     out, err = capfd.readouterr()
     message = f'\n{test_obj_with_dict.fail_message}\n' \
-              f'Warning! You are have more {4 - test_obj_with_dict.fails}\n' \
+              f'Warning! You are have more {4 - test_obj_with_dict.fails} chances to mistakes\n' \
               f'{test_obj_with_dict.output_word.upper()}' + '\n'
     assert out == message
 

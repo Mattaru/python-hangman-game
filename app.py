@@ -53,7 +53,8 @@ class Hangman:
         if self.guess_letter_valid():
             print(f'{self.success_message}\n{self.output_word.upper()}')
         else:
-            print(f'\n{self.fail_message}\nWarning! You are have more {4 - self.fails}\n{self.output_word.upper()}')
+            print(f'\n{self.fail_message}\nWarning! You are have more {4 - self.fails} chances to mistakes\n'
+                  f'{self.output_word.upper()}')
 
     def game_process(self):
         while self.fails != 4 and self.letter_count != 0:
