@@ -11,4 +11,4 @@
 1. Activete the venv `<venv:name>/Scripts/activate`
 1. Install requirements `pip install -r requirements`
 1. Run the application `python app.py`
-1. For the run tests enter command `coverage run -m --source=. pytest tests/test_pytest.py ` or `pytest --cov=. tests/test_pytest.py`
+1. For the run tests enter command `coverage run -m --source=. pytest tests/test_pytest.py ` or `pytest --cov=. tests/test_pytest.py` where `--cov` it a project where we make calculate a coverage
